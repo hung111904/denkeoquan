@@ -1,11 +1,11 @@
 const lantern = document.getElementById('lantern');
 
-// Dừng quay khi rê chuột vào
+// Khi rê chuột vào bất kỳ mặt nào thì dừng quay
 lantern.addEventListener('mouseover', () => {
   lantern.style.animationPlayState = 'paused';
 });
 
-// Quay tiếp khi rê chuột ra
+// Khi rê chuột ra thì quay tiếp
 lantern.addEventListener('mouseout', () => {
   lantern.style.animationPlayState = 'running';
 });
