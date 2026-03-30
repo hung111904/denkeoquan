@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #111;
+  background: radial-gradient(circle, #222 40%, #000 100%);
 }
 
 .scene {
@@ -18,20 +18,27 @@ body {
   animation: spin 10s linear infinite;
 }
 
-.lantern img {
+.face {
   position: absolute;
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
 
-/* Sắp xếp 6 mặt quanh trục Y */
-.lantern img:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
-.lantern img:nth-child(2) { transform: rotateY(60deg) translateZ(300px); }
-.lantern img:nth-child(3) { transform: rotateY(120deg) translateZ(300px); }
-.lantern img:nth-child(4) { transform: rotateY(180deg) translateZ(300px); }
-.lantern img:nth-child(5) { transform: rotateY(240deg) translateZ(300px); }
-.lantern img:nth-child(6) { transform: rotateY(300deg) translateZ(300px); }
+/* 6 mặt quanh trục Y */
+.face:nth-child(1) { background: crimson; transform: rotateY(0deg) translateZ(300px); }
+.face:nth-child(2) { background: orange; transform: rotateY(60deg) translateZ(300px); }
+.face:nth-child(3) { background: yellowgreen; transform: rotateY(120deg) translateZ(300px); }
+.face:nth-child(4) { background: teal; transform: rotateY(180deg) translateZ(300px); }
+.face:nth-child(5) { background: royalblue; transform: rotateY(240deg) translateZ(300px); }
+.face:nth-child(6) { background: purple; transform: rotateY(300deg) translateZ(300px); }
 
 @keyframes spin {
   from { transform: rotateY(0deg); }
